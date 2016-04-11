@@ -1,6 +1,6 @@
 appnope==0.1.0
 decorator==4.0.9
-Django==1.7.11
+Django==1.9.5
 django-cors-headers==1.1.0
 django-extensions==1.6.1
 djangorestframework==3.3.3
