@@ -59,6 +59,8 @@ WSGI_APPLICATION = 'benov.wsgi.application'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
