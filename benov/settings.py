@@ -20,11 +20,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '0w#9cull^^memj(7*1sy+n0w90+$-yg$#))hc#1qpvx&8u%mkx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+import dj_database_url
+
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config()
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -61,16 +66,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-# Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -83,6 +78,22 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 
 # Static files (CSS, JavaScript, Images)

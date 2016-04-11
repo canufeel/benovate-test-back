@@ -1,5 +1,6 @@
 appnope==0.1.0
 decorator==4.0.9
+dj-database-url==0.4.1
 Django==1.9.5
 django-cors-headers==1.1.0
 django-extensions==1.6.1
@@ -12,8 +13,10 @@ model-mommy==1.2.6
 nodeenv==0.13.6
 pexpect==4.0.1
 pickleshare==0.7.2
+psycopg2==2.6.1
 ptyprocess==0.5.1
 simplegeneric==0.8.1
 six==1.10.0
 traitlets==4.2.1
 Werkzeug==0.11.5
+whitenoise==3.0
